@@ -19,5 +19,28 @@
         <Button
             Text="Carregar"
             Command="{Binding CarregarPostagenscommand}"/>
+
+        <CollectionView ItemsSource="{Binding Listar}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ScrollView>
+                    <VerticalStackLayout Padding="10">
+                        <Label
+                            Text="{Binding Id}"
+                            FontAttributes="Bold" />
+                        <Label
+                            Text="{Binding Title}"
+                            FontAttributes="Bold" />
+                        <Label 
+                          Text="{Binding Body}"
+                          FontAttributes="Italic"
+                       VerticalOptions="End" />
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+
     </VerticalStackLayout>
 </ContentPage>
